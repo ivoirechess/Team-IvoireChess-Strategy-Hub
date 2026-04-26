@@ -1,0 +1,140 @@
+{
+  "season": "2025-2026",
+  "myTeamId": "ivoireChess",
+  "teams": {
+    "alfene": {
+      "id": "alfene", "name": "Team Alfene", "captain": "Google_maitre",
+      "totalElo": 9320, "group": "B",
+      "players": [
+        { "name": "Google_maitre",       "handle": "google_maitre",       "elo": 2239, "platform": "chess.com" },
+        { "name": "Sernser",             "handle": "sernser",             "elo": 2068, "platform": "chess.com" },
+        { "name": "GMinthemakinggggggg", "handle": "gminthemakinggggggg", "elo": 1988, "platform": "chess.com" },
+        { "name": "Anonyme2026",         "handle": "anonyme2026",         "elo": 1540, "platform": "chess.com" },
+        { "name": "TRANKIL225",          "handle": "trankil225",          "elo": 1485, "platform": "chess.com" }
+      ]
+    },
+    "yoann": {
+      "id": "yoann", "name": "Team Yoann", "captain": "yoann565",
+      "totalElo": 9307, "group": "B",
+      "players": [
+        { "name": "yoann565",     "handle": "yoann565",     "elo": 2131, "platform": "chess.com" },
+        { "name": "MatmasterN1",  "handle": "matmastern1",  "elo": 1959, "platform": "chess.com" },
+        { "name": "loicleheros",  "handle": "loicleheros",  "elo": 1808, "platform": "chess.com" },
+        { "name": "SKUJ-S",       "handle": "skuj-s",       "elo": 1799, "platform": "chess.com" },
+        { "name": "365Nightmare", "handle": "365nightmare", "elo": 1610, "platform": "chess.com" }
+      ]
+    },
+    "elfirouj": {
+      "id": "elfirouj", "name": "Team Elfirouj", "captain": "Elfirouj225",
+      "totalElo": 9321, "group": "A",
+      "players": [
+        { "name": "Elfirouj225",       "handle": "elfirouj225",       "elo": 2315, "platform": "chess.com" },
+        { "name": "Chess_Bright_star", "handle": "chess_bright_star", "elo": 2122, "platform": "chess.com" },
+        { "name": "Baymanchess07",     "handle": "baymanchess07",     "elo": 1927, "platform": "chess.com" },
+        { "name": "Yaniss_ard",        "handle": "yaniss_ard",        "elo": 1926, "platform": "chess.com" },
+        { "name": "willpensy",         "handle": "willpensy",         "elo": 1031, "platform": "chess.com" }
+      ]
+    },
+    "tetrix": {
+      "id": "tetrix", "name": "Team Tetrix", "captain": "Red_Tetrix",
+      "totalElo": 9308, "group": "A",
+      "players": [
+        { "name": "Red_Tetrix",    "handle": "red_tetrix",    "elo": 2101, "platform": "chess.com" },
+        { "name": "Nantyoff_2000", "handle": "nantyoff_2000", "elo": 2038, "platform": "chess.com" },
+        { "name": "TheRkie22",     "handle": "therkie22",     "elo": 1943, "platform": "chess.com" },
+        { "name": "le_maitre226",  "handle": "le_maitre226",  "elo": 1804, "platform": "chess.com" },
+        { "name": "Otoibelebe",    "handle": "otoibelebe",    "elo": 1422, "platform": "chess.com" }
+      ]
+    },
+    "jeanDaniel": {
+      "id": "jeanDaniel", "name": "Team Jean_Daniel", "captain": "Jean_daniel23",
+      "totalElo": 9311, "group": "B",
+      "players": [
+        { "name": "Jean_daniel23", "handle": "jean_daniel23", "elo": 2327, "platform": "chess.com" },
+        { "name": "Daviddigbeu",   "handle": "daviddigbeu",   "elo": 2198, "platform": "chess.com" },
+        { "name": "DrBlitzkill",   "handle": "drblitzkill",   "elo": 2001, "platform": "chess.com" },
+        { "name": "Njably31",      "handle": "njably31",      "elo": 1815, "platform": "chess.com" },
+        { "name": "Le_roi_Lylou",  "handle": "le_roi_lylou",  "elo": 970,  "platform": "chess.com" }
+      ]
+    },
+    "ivoireChess": {
+      "id": "ivoireChess", "name": "Team IvoireChess", "captain": "IvoireChess",
+      "totalElo": 9313, "group": "A",
+      "players": [
+        { "name": "IvoireChess",     "handle": "ivoirechess",     "elo": 2156, "platform": "chess.com" },
+        { "name": "Syldon",          "handle": "syldon",          "elo": 2120, "platform": "chess.com" },
+        { "name": "LeoVigilant",     "handle": "leovigilant",     "elo": 1850, "platform": "chess.com" },
+        { "name": "Novadanieldemon", "handle": "novadanieldemon", "elo": 1815, "platform": "chess.com" },
+        { "name": "Death_meins",     "handle": "death_meins",     "elo": 1372, "platform": "chess.com" }
+      ]
+    }
+  },
+  "schedule": [
+    {
+      "week": 1, "dates": "2 – 3 mai 2026", "dateSat": "2026-05-02", "dateSun": "2026-05-03",
+      "teamA": "alfene", "teamB": "yoann",
+      "boards": [
+        { "board": 5, "day": "sat", "a": "TRANKIL225",          "b": "365Nightmare" },
+        { "board": 4, "day": "sat", "a": "Anonyme2026",         "b": "SKUJ-S" },
+        { "board": 3, "day": "sat", "a": "GMinthemakinggggggg", "b": "loicleheros" },
+        { "board": 2, "day": "sun", "a": "Sernser",             "b": "MatmasterN1" },
+        { "board": 1, "day": "sun", "a": "Google_maitre",       "b": "yoann565" }
+      ]
+    },
+    {
+      "week": 2, "dates": "9 – 10 mai 2026", "dateSat": "2026-05-09", "dateSun": "2026-05-10",
+      "teamA": "elfirouj", "teamB": "tetrix",
+      "boards": [
+        { "board": 5, "day": "sat", "a": "willpensy",         "b": "Otoibelebe" },
+        { "board": 4, "day": "sat", "a": "Yaniss_ard",        "b": "le_maitre226" },
+        { "board": 3, "day": "sat", "a": "Baymanchess07",     "b": "TheRkie22" },
+        { "board": 2, "day": "sun", "a": "Chess_Bright_star", "b": "Nantyoff_2000" },
+        { "board": 1, "day": "sun", "a": "Elfirouj225",       "b": "Red_Tetrix" }
+      ]
+    },
+    {
+      "week": 3, "dates": "16 – 17 mai 2026", "dateSat": "2026-05-16", "dateSun": "2026-05-17",
+      "teamA": "jeanDaniel", "teamB": "yoann",
+      "boards": [
+        { "board": 5, "day": "sat", "a": "Le_roi_Lylou",  "b": "365Nightmare" },
+        { "board": 4, "day": "sat", "a": "Njably31",      "b": "SKUJ-S" },
+        { "board": 3, "day": "sat", "a": "DrBlitzkill",   "b": "loicleheros" },
+        { "board": 2, "day": "sun", "a": "Daviddigbeu",   "b": "MatmasterN1" },
+        { "board": 1, "day": "sun", "a": "Jean_daniel23", "b": "yoann565" }
+      ]
+    },
+    {
+      "week": 4, "dates": "23 – 24 mai 2026", "dateSat": "2026-05-23", "dateSun": "2026-05-24",
+      "teamA": "ivoireChess", "teamB": "tetrix",
+      "boards": [
+        { "board": 5, "day": "sat", "a": "Death_meins",     "b": "Otoibelebe" },
+        { "board": 4, "day": "sat", "a": "Novadanieldemon", "b": "le_maitre226" },
+        { "board": 3, "day": "sat", "a": "LeoVigilant",     "b": "TheRkie22" },
+        { "board": 2, "day": "sun", "a": "Syldon",          "b": "Nantyoff_2000" },
+        { "board": 1, "day": "sun", "a": "IvoireChess",     "b": "Red_Tetrix" }
+      ]
+    },
+    {
+      "week": 5, "dates": "30 – 31 mai 2026", "dateSat": "2026-05-30", "dateSun": "2026-05-31",
+      "teamA": "alfene", "teamB": "jeanDaniel",
+      "boards": [
+        { "board": 5, "day": "sat", "a": "TRANKIL225",          "b": "Le_roi_Lylou" },
+        { "board": 4, "day": "sat", "a": "Anonyme2026",         "b": "Njably31" },
+        { "board": 3, "day": "sat", "a": "GMinthemakinggggggg", "b": "DrBlitzkill" },
+        { "board": 2, "day": "sun", "a": "Sernser",             "b": "Daviddigbeu" },
+        { "board": 1, "day": "sun", "a": "Google_maitre",       "b": "Jean_daniel23" }
+      ]
+    },
+    {
+      "week": 6, "dates": "6 – 7 juin 2026", "dateSat": "2026-06-06", "dateSun": "2026-06-07",
+      "teamA": "elfirouj", "teamB": "ivoireChess",
+      "boards": [
+        { "board": 5, "day": "sat", "a": "willpensy",         "b": "Death_meins" },
+        { "board": 4, "day": "sat", "a": "Yaniss_ard",        "b": "Novadanieldemon" },
+        { "board": 3, "day": "sat", "a": "Baymanchess07",     "b": "LeoVigilant" },
+        { "board": 2, "day": "sun", "a": "Chess_Bright_star", "b": "Syldon" },
+        { "board": 1, "day": "sun", "a": "Elfirouj225",       "b": "IvoireChess" }
+      ]
+    }
+  ]
+}
