@@ -1,8 +1,7 @@
 /* ============================================================
    ICC Strategy Hub — API client (chess.com & lichess) + cache
    ============================================================
-   - Chess.com API publique bloquée CORS depuis le navigateur :
-     on passe par allorigins.win (proxy transparent gratuit)
+   - Chess.com : tentative directe puis fallback via plusieurs proxys CORS
    - Cache localStorage avec TTL configurable
    - Toutes les fonctions retournent une Promise
    ============================================================ */
@@ -10,7 +9,10 @@
 export const API = (() => {
   const TTL_24H = 24 * 60 * 60 * 1000;
   const TTL_1H  = 60 * 60 * 1000;
-  const PROXY   = 'https://api.allorigins.win/raw?url=';
+  const CHESSCOM_PROXIES = [
+    (url) => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
+    (url) => `https://corsproxy.io/?${encodeURIComponent(url)}`
+  ];
 
   /* ---------- Cache LS avec TTL ---------- */
   function cacheGet(key) {
@@ -37,17 +39,31 @@ export const API = (() => {
     }
   }
 
-  /* ---------- Fetch via proxy (chess.com) ---------- */
+  /* ---------- Fetch robuste chess.com (direct + proxys) ---------- */
   async function fetchChessCom(path) {
     const url = `https://api.chess.com/pub/${path}`;
     const cacheKey = `cc:${path}`;
     const cached = cacheGet(cacheKey);
     if (cached) return cached;
-    const r = await fetch(PROXY + encodeURIComponent(url));
-    if (!r.ok) throw new Error(`chess.com ${r.status} on ${path}`);
-    const j = await r.json();
-    cacheSet(cacheKey, j, TTL_24H);
-    return j;
+
+    const attempts = [url, ...CHESSCOM_PROXIES.map(makeProxyUrl => makeProxyUrl(url))];
+    let lastError = null;
+
+    for (const endpoint of attempts) {
+      try {
+        const r = await fetch(endpoint, {
+          headers: { 'Accept': 'application/json' }
+        });
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        const j = await r.json();
+        cacheSet(cacheKey, j, TTL_24H);
+        return j;
+      } catch (e) {
+        lastError = e;
+      }
+    }
+
+    throw new Error(`chess.com fetch failed on ${path}: ${lastError?.message || 'unknown error'}`);
   }
 
   /* ---------- Lichess (CORS-friendly) ---------- */
