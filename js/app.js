@@ -382,12 +382,12 @@ async function openDossier(myP, oppP, board, match) {
 async function runDossierAnalysis(panes, myP, oppP, board, match) {
   // Fetch en parallèle
   const [oppGames, myGames, oppProfile, myProfile, oppStats, h2h] = await Promise.all([
-    API.getRecentGames(oppP.handle, 3).catch(() => []),
-    API.getRecentGames(myP.handle, 3).catch(() => []),
+    API.getRecentGames(oppP.handle, 3, { timeClass: 'rapid' }).catch(() => []),
+    API.getRecentGames(myP.handle, 3, { timeClass: 'rapid' }).catch(() => []),
     API.getProfile(oppP.handle).catch(() => null),
     API.getProfile(myP.handle).catch(() => null),
     API.getStats(oppP.handle).catch(() => null),
-    API.getHeadToHead(myP.handle, oppP.handle, { monthsBack: 12 }).catch(() => [])
+    API.getHeadToHead(myP.handle, oppP.handle, { monthsBack: 12, timeClass: 'rapid' }).catch(() => [])
   ]);
 
   // === Pane 0 : Vue d'ensemble
@@ -907,7 +907,7 @@ function renderScout() {
       <span class="hero-tag">SCOUT LIBRE</span>
       <h1 class="hero-title">ANALYSE<br>UN JOUEUR</h1>
       <p class="hero-sub">
-        Entre n'importe quel pseudo Chess.com pour récupérer son répertoire, sa forme et ses faiblesses.
+        Entre n'importe quel pseudo Chess.com pour récupérer son répertoire, sa forme et ses faiblesses en cadence rapide.
       </p>
     </div>
   `;
@@ -937,7 +937,7 @@ function renderScout() {
     out.appendChild(skeleton(5));
     try {
       const [games, profile, stats] = await Promise.all([
-        API.getRecentGames(handle, months).catch(() => []),
+        API.getRecentGames(handle, months, { timeClass: 'rapid' }).catch(() => []),
         API.getProfile(handle).catch(() => null),
         API.getStats(handle).catch(() => null)
       ]);
@@ -957,7 +957,7 @@ function renderScout() {
       const sec = el('div', { class: 'mt-24' });
       sec.appendChild(buildOpeningsPane(ops, traps, handle));
       out.appendChild(sec);
-      toast(`${games.length} parties analysées`, 'success');
+      toast(`${games.length} parties rapides analysées`, 'success');
     } catch (e) {
       clear(out);
       out.appendChild(el('p', { class: 'dim' }, 'Erreur : ' + e.message));

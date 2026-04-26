@@ -131,7 +131,7 @@ export const API = (() => {
   /* ---------- Head-to-head : parties communes A vs B ---------- */
   async function getHeadToHead(handleA, handleB, opts = {}) {
     const monthsBack = opts.monthsBack || 12;
-    const games = await getRecentGames(handleA, monthsBack);
+    const games = await getRecentGames(handleA, monthsBack, { timeClass: opts.timeClass });
     const lh = handleB.toLowerCase();
     const filtered = games.filter(g => {
       const wu = (g.white?.username || '').toLowerCase();
